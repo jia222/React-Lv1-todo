@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import uuid from 'react-uuid';
 
-export const Input = (todos, setTodos) => {
+//props {}로 묶어 줘야 읽힘 !!
+export const Input = ({ todos, setTodos }) => {
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState('');
 
@@ -9,21 +10,22 @@ export const Input = (todos, setTodos) => {
     <div>
       <form
         onSubmit={(e) => {
-          e.prevenDefault();
+          e.preventDefault();
           const newTodo = {
             id: uuid(),
             title: title,
             contents: contents,
             isDone: false,
           };
-
-          setTodos(...todos, newTodo);
+          // console.log('hhhh1111');
+          setTodos([...todos, newTodo]);
         }}
       >
         <input
           value={title}
           onChange={(e) => {
             setTitle(e.target.value);
+            console.log(e.target.value);
           }}
         />
         <input

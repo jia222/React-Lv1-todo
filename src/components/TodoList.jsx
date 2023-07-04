@@ -20,7 +20,7 @@ export const TodoList = ({ todos, setTodos, listIsDone }) => {
                   paddingBottom: '20px',
                 }}
               >
-                <p>{todo.id}</p>
+                {/* <p>{todo.id}</p> */}
                 <h3>{todo.title}</h3>
                 <p>{todo.body}</p>
                 <p> 완료여부 : {todo.isDone.toString()}</p>
