@@ -3,9 +3,6 @@ import './App.css';
 import uuid from 'react-uuid';
 import { Input } from './components/Input';
 import { TodoList } from './components/TodoList';
-// import Header from './components/Header';
-// import Todo from './components/Todo';
-// import List from './components/List';
 
 function App() {
   const [todos, setTodos] = useState([
