@@ -32,6 +32,7 @@ const todosSlice = createSlice({
     addTodo: (state, action) => {
       state.list.push(action.payload);
     },
+    //여기도 추가해줌
     deleteTodo: (state, action) => {
       state.list.map((item) => console.log(item.id));
       console.log(action.payload);
